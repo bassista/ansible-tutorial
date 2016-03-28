@@ -1,0 +1,6 @@
+---
+- hosts: local
+  tasks:
+  - name: Ping that machine brah
+    ping:
+    
