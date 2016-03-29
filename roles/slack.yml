@@ -1,0 +1,10 @@
+---
+- hosts: localhost 
+  vars: 
+    - slack_token: how do i put this variable into var file and use vault to encrypt it so it can be checked in git repo?
+  tasks:
+    - name: Say hello to krk command central slack
+      local_action:
+        module: slack
+        token: "{{ slack_token }}" 
+        msg: "Hello"
