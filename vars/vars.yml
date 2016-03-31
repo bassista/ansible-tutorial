@@ -1,1 +1,0 @@
-slack_token: "{{ lookup('env', 'SLACK_TOKEN') }}"
