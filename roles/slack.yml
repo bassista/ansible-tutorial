@@ -1,7 +1,7 @@
 ---
-- hosts: all
-  vars:
-    - slack_token: add_token_here
+- hosts: localhost
+  vars_files:
+    - ../vars/vars.yml
   tasks:
     - name: Say hello on slack channel.
       local_action:
