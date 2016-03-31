@@ -1,3 +1,2 @@
-[local]
-cia-server ansible_connection=local
-torrent-server ansible_connection=local
+[mylocalhost]
+mylocalhost ansible_connection=local

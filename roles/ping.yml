@@ -1,12 +1,5 @@
 ---
-- hosts: local
+- hosts: all
   tasks:
-  - name: Ping that machine brah...
+  - name: Ping machine.
     ping:
-
-  - name: Say hello world.
-    command: echo Hello world!
-
-  - name: Say good night, Dick.
-    command: echo Good night, Dick.
-

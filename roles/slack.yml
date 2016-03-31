@@ -1,10 +1,15 @@
 ---
-- hosts: localhost 
-  vars: 
-    - slack_token: how do i put this variable into var file and use vault to encrypt it so it can be checked in git repo?
+- hosts: all
+  vars:
+    - slack_token: add_token_here
   tasks:
-    - name: Say hello to krk command central slack
+    - name: Say hello on slack channel.
       local_action:
         module: slack
-        token: "{{ slack_token }}" 
+        token: "{{ slack_token }}"
+        username: "ansible"
         msg: "Hello"
+        channel: "test"
+        # RED logo http://www.geedew.com/wp-content/uploads/2015/01/ansible_circleA_red.png
+        # BLACK logo https://pbs.twimg.com/profile_images/428287509047435264/ElOjna20_400x400.png
+        icon_url: "https://pbs.twimg.com/profile_images/428287509047435264/ElOjna20_400x400.png"
