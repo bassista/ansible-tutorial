@@ -1,6 +1,4 @@
 ---
-  - include_vars: ../../group_vars/all/slack-token.yml
-
   - name: Say hello on slack channel.
     local_action:
       module: slack
