@@ -14,5 +14,12 @@ Vagrant.configure(2) do |config|
 
   $deployment = "deployment"
   $install = $deployment + "/install"
-  config.vm.provision "install-ansible", type: "shell", path: $install + "/install-ansible.sh", privileged: true
+
+  ["install-ansible"].each do |script|
+    config.vm.provision :shell do |sh|
+      sh.name = script
+      sh.path = $install + "/" + script + ".sh"
+      sh.privileged = true
+    end
+  end
 end
